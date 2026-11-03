@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'DM Serif Display', Georgia, serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-devanagari: 'Noto Serif Devanagari', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F7F5F0;
+    color: #1A1A1A;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #E6A756;
+    color: #FFFFFF;
+  }
+}
+
+.font-serif-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-devanagari {
+  font-family: 'Noto Serif Devanagari', Georgia, serif;
+}
+
+/* Subtle Indian Jaali (lattice) motif at 3-5% opacity */
+.jaali-pattern {
+  background-image: radial-gradient(rgba(230, 167, 86, 0.08) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(230, 167, 86, 0.08) 1.5px, #F7F5F0 1.5px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.jaali-pattern-dark {
+  background-image: radial-gradient(rgba(230, 167, 86, 0.06) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(230, 167, 86, 0.06) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Line wrapper for GSAP clip upward reveal */
+.line-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* Hide scrollbar for clean track presentation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
